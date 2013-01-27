@@ -17,5 +17,6 @@
     "url": "git://github.com/t9m/ci_test.git"
   },
   "author": "",
-  "license": "BSD"
+  "license": "BSD",
+  "gitHead": "bff924241bf93f6c9ae6e2b7ce4fb64a76cb0c1f"
 }
