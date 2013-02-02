@@ -1,3 +1,26 @@
+requirejs.config({
+  shim: {
+    'lib/zepto': {
+      exports: 'Zepto'
+    },
+    'lib/lodash': {
+      exports: '_'
+    },
+    'lib/backbone': {
+      deps: ['lib/zepto', 'lib/lodash'],
+      exports: 'Backbone'
+    }
+  }
+});
+
+require(['model', 'view'], function(Model, View) {
+  var post = new View.Post({
+    model: new Model.Post()
+  });
+
+  console.log(post);
+});
+
 require(['config', 'component'], function(config, clock) {
   var label = document.getElementById('label');
   label.textContent = config.label;
