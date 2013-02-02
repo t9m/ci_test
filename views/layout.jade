@@ -3,5 +3,12 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    script
+      var require = {
+        urlArgs: 'bust=' + (new Date()).getTime()
+      };
+    script(type='text/javascript', src='/javascripts/lib/require.js', data-main='/javascripts/main.js', async)
   body
+    div#label
+    div#clock
     block content
