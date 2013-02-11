@@ -1,13 +1,9 @@
-/*
- * GET home page.
- */
-
 var model = require('../model');
 var Post = model.Post;
 
 exports.index = function(req, res) {
   Post.find({}, function(err, items) {
-    res.render('index', {title: 'Entry List', items: items});
+    res.render('index', {title: 't9m workplace', items: items});
   });
 };
 
@@ -25,4 +21,8 @@ exports.create = function(req, res) {
       res.redirect('/');
     }
   });
+};
+
+exports.enchant = function(req, res) {
+  res.render('enchant', {title: 'enchant.js'});
 };
