@@ -9,8 +9,14 @@ requirejs.config({
     'lib/backbone': {
       deps: ['lib/zepto', 'lib/lodash'],
       exports: 'Backbone'
+    },
+    'lib/bootstrap': {
+      deps: ['lib/zepto']
     }
   }
+});
+
+require(['lib/bootstrap'], function() {
 });
 
 require(['model', 'view'], function(Model, View) {
