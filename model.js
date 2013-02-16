@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var db = mongoose.connect(process.env.MONGHQ_URL || 'mongodb://localhost/firstapp');
+var db = mongoose.connect(process.env.MONGOHQ_URL || 'mongodb://localhost/firstapp');
 
 function validator(v) {
   return v.length > 0;
