@@ -2,8 +2,16 @@ extends layout
 
 block content
   h1= title
-  p
-    a(href="/form") New Entry
-  ul
-    for item in items
-      li.post #{item.text}
+
+  section#main-content
+    p
+      a(href='/form') New Entry
+    ul
+      for item in items
+        li.post #{item.text}
+
+  footer
+    nav
+      a(href='#about') about
+
+  include templates/about
