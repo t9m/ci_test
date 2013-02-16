@@ -16,21 +16,13 @@ requirejs.config({
   }
 });
 
-require(['lib/bootstrap'], function() {
-});
+require(['lib/bootstrap']);
 
-require(['model', 'view'], function(Model, View) {
-  var post = new View.Post({
-    model: new Model.Post()
+require(['model', 'view', 'router'], function(Model, View, Router) {
+  var app = new View.App({
+    model: new Model.App()
   });
-});
 
-require(['config', 'component'], function(config, clock) {
-  /*
-  var label = document.getElementById('label');
-  label.textContent = config.label;
-
-  var container = document.getElementById('clock');
-  clock.render(container);
-  */
+  var router = new Router.App();
+  Backbone.history.start({pushState: true, root: '/'});
 });

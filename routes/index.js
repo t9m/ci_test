@@ -22,7 +22,3 @@ exports.create = function(req, res) {
     }
   });
 };
-
-exports.enchant = function(req, res) {
-  res.render('enchant', {title: 'enchant.js'});
-};

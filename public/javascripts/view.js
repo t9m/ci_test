@@ -1,7 +1,8 @@
 define(['lib/lodash', 'lib/backbone'], function(_, Backbone) {
-  var Post = Backbone.Model.extend({});
+  var App = Backbone.View.extend({
+  });
 
   return {
-    Post: Post
+    App: App
   }
 });
