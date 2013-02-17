@@ -10,6 +10,9 @@ html
       var require = {
         urlArgs: 'bust=' + (new Date()).getTime()
       };
-    script(type='text/javascript', src='/javascripts/lib/require.js', data-main='/javascripts/main.js', async)
+
+    unless (js)
+      js = '/javascripts/main.js'
+    script(type='text/javascript', src='/javascripts/lib/require.js', data-main=js, async)
   body
     block content
